@@ -1,0 +1,317 @@
+@import "tailwindcss";
+
+/* ============ GLOBAL STYLES ============ */
+* {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+body, html {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, button, li, div {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* ============ INTRO PAGE ============ */
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.5;
+    filter: brightness(0.6);
+}
+
+.pulsating-logo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    animation: pulsate 2s infinite;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', serif;
+    position: relative;
+    z-index: 2;
+    animation: float-up 1s ease-out;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+/* ============ ANIMATIONS ============ */
+@keyframes float-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scale-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+    }
+}
+
+@keyframes rotate-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce-soft {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes card-zoom-in {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        z-index: 50;
+    }
+    to {
+        transform: scale(50);
+        opacity: 0;
+        z-index: 50;
+    }
+}
+
+/* ============ UTILITY ANIMATIONS ============ */
+.animate-float-up {
+    animation: float-up 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slide-in-left 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 0.6s ease-out;
+}
+
+.animate-scale-in {
+    animation: scale-in 0.6s ease-out;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+    animation: rotate-slow 20s linear infinite;
+}
+
+.animate-bounce-soft {
+    animation: bounce-soft 2s ease-in-out infinite;
+}
+
+.animate-gradient-shift {
+    animation: gradient-shift 6s ease infinite;
+    background-size: 200% 200%;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ============ SCROLL-TRIGGERED ANIMATIONS ============ */
+@keyframes scroll-fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scroll-fade-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scroll-fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scroll-scale-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.scroll-trigger {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: scroll-fade-in-up 1.2s ease-out 2s forwards !important;
+}
+
+.animate-scroll-in {
+    animation: scroll-fade-in-up 0.7s ease-out forwards !important;
+}
+
+.scroll-trigger.left {
+    transform: translateX(-40px);
+}
+
+.animate-scroll-in.left {
+    animation: scroll-fade-in-left 0.7s ease-out forwards !important;
+}
+
+.scroll-trigger.right {
+    transform: translateX(40px);
+}
+
+.animate-scroll-in.right {
+    animation: scroll-fade-in-right 0.7s ease-out forwards !important;
+}
+
+.scroll-trigger.scale {
+    transform: scale(0.95);
+}
+
+.animate-scroll-in.scale {
+    animation: scroll-scale-in 0.7s ease-out forwards !important;
+}
