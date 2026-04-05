@@ -24,9 +24,10 @@ export const Intro = () => {
                 autoPlay 
                 muted 
                 loop 
+                playsInline
                 className="intro-video-background"
             >
-                <source src={introVid} type="video/mp4" />
+                <source src={introVid} type="video/quicktime" />
             </video>
             {isLoading && <LoadingAnimation />}
             <button 
