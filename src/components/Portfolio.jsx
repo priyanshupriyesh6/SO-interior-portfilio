@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 // Import project images - Kylin Aerocity
 import kylinAero1 from '../assets/Kylin (aerocity)/IMG_4972.PNG';
 import kylinAero2 from '../assets/Kylin (aerocity)/IMG_4973.PNG';
@@ -53,9 +53,7 @@ import soi73 from '../assets/sectioncard slot images/soi7/3.jpeg';
 import soi74 from '../assets/sectioncard slot images/soi7/4.jpeg';
 
 export const Portfolio = () => {
-  const [animateItems, setAnimateItems] = useState(false);
   const [activeCategory, setActiveCategory] = useState('All');
-  const cardRefs = React.useRef([]);
 
   const portfolioItems = [
     // Kylin Skybar - 10 images
@@ -114,137 +112,68 @@ export const Portfolio = () => {
 
   const categories = ['All', 'Bar', 'Residential', 'Commercial', 'F&B'];
 
-  const filteredItems = activeCategory === 'All' 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === activeCategory);
-
-  useEffect(() => {
-    setAnimateItems(true);
-  }, []);
-
-  useEffect(() => {
-    setAnimateItems(false);
-    const timer = setTimeout(() => setAnimateItems(true), 50);
-    return () => clearTimeout(timer);
-  }, [activeCategory]);
-
-  // Set up intersection observer for portfolio items
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-scroll-in');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    cardRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      cardRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
-    };
-  }, [filteredItems]);
+  const filteredItems = activeCategory === 'All'
+    ? portfolioItems
+    : portfolioItems.filter((item) => item.category === activeCategory);
 
   return (
-    <div className="py-20" style={{ backgroundColor: '#000000' }}>
-      <div className="container mx-auto px-4">
-        {/* Title Section */}
-        <div className="text-center mb-16 animate-float-up">
-          <h2 className="text-5xl font-bold mb-4 text-white text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600" style={{ fontFamily: 'Georgia, Times New Roman, serif' }}>
-            Our Portfolio
-          </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Georgia, Times New Roman, serif' }}>
-            A curated collection of our work showcasing luxury, functionality, and innovative design solutions.
+    <section className="page-section pt-0">
+      <div className="section-inner">
+        <div className="mb-10 max-w-3xl">
+          <p className="section-label">Portfolio</p>
+          <h2 className="section-title">Image framing is consistent, spacing is cleaner, and the work stays central.</h2>
+          <p className="section-subtitle">
+            Categories remain available, but motion-heavy overlays and scaling have been replaced with quieter cards and
+            more predictable image proportions.
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16 animate-slide-in-up">
-          {categories.map((cat, idx) => (
+        <div className="mb-10 flex flex-wrap gap-3">
+          {categories.map((cat) => (
             <button
-              key={idx}
+              key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+              className={`rounded-full border px-5 py-2 text-sm font-semibold transition-colors duration-200 ${
                 activeCategory === cat
-                  ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/50 scale-105'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
+                  ? 'border-[var(--color-border-strong)] bg-[rgba(212,175,55,0.12)] text-[var(--color-text)]'
+                  : 'border-white/10 bg-white/[0.03] text-[var(--color-muted)] hover:border-[var(--color-border)] hover:text-[#fff7de]'
               }`}
-              style={{
-                animation: animateItems ? `float-up 0.5s ease-out ${idx * 0.1}s backwards` : 'none',
-                fontFamily: 'Georgia, Times New Roman, serif'
-              }}
             >
               {cat}
             </button>
           ))}
         </div>
 
-        {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {filteredItems.map((item, index) => (
-            <div
-              ref={(el) => {
-                if (el && !cardRefs.current.includes(el)) {
-                  cardRefs.current[index] = el;
-                }
-              }}
-              key={index}
-              className="group relative overflow-hidden rounded-xl shadow-2xl cursor-pointer transform h-64"
-              style={{
-                animation: animateItems ? `scale-in 0.5s ease-out ${index * 0.08}s backwards` : 'none',
-                opacity: 1
-              }}
-            >
-              {/* Image Container */}
-              <div className="relative h-full w-full overflow-hidden bg-gray-800">
+            <article key={`${item.title}-${index}`} className="surface-card overflow-hidden">
+              <div className="image-frame rounded-none border-x-0 border-t-0 border-b border-white/8 shadow-none">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 ease-out"
+                  className="h-[260px] w-full"
                   loading="lazy"
                 />
-                
-                {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-
-              {/* Content Overlay */}
-              <div className="absolute inset-0 flex flex-col items-center justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-10 group-hover:translate-y-0">
-                <h3 className="text-2xl font-bold mb-2 text-center" style={{ fontFamily: 'Georgia, Times New Roman, serif' }}>{item.title}</h3>
-                <p className="text-sm text-gray-200 text-center" style={{ fontFamily: 'Georgia, Times New Roman, serif' }}>
+              <div className="space-y-3 p-5">
+                <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">{item.category}</p>
+                <h3 className="text-xl font-semibold text-[var(--color-gold)]">{item.title}</h3>
+                <p className="leading-7 text-[var(--color-muted)]">
                   {item.description}
                 </p>
               </div>
-
-              {/* Blue Glow Border on Hover */}
-              <div className="absolute inset-0 rounded-xl border-2 border-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </div>
+            </article>
           ))}
         </div>
 
-        {/* Portfolio Statement */}
-        <div 
-          className="text-center bg-gradient-to-r from-gray-800 to-gray-900 p-12 rounded-xl shadow-2xl border border-gray-700 animate-float-up"
-          style={{
-            backgroundImage: 'linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 51, 234, 0.05) 100%)',
-            animation: 'pulse-glow 3s ease-in-out infinite'
-          }}
-        >
-          <p className="text-2xl text-white font-semibold leading-relaxed" style={{ fontFamily: 'Georgia, Times New Roman, serif' }}>
-            ✨ "Each project reflects our commitment to detail, design excellence, and client satisfaction."
+        <div className="mt-8 surface-card-soft p-6">
+          <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">Portfolio Note</p>
+          <p className="mt-3 max-w-4xl leading-7 text-[var(--color-muted)]">
+            Each project is presented with the same spacing, border weight, and image ratio so the portfolio feels more
+            premium and easier to browse without relying on extra animation.
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

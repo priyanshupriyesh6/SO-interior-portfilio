@@ -9,13 +9,13 @@ import { Projects } from "./pages/Projects"
 import { Process } from "./pages/Process"
 import { Founders } from "./pages/Founders"
 import { ScrollToTop } from "./components/ScrollToTop"
-import { CircularNavbar } from "./components/CircularNavbar"
+import { SiteNavbar } from "./components/SiteNavbar"
 
 function App() {
   return (
     <>
      <BrowserRouter>
-       <CircularNavbar />
+       <SiteNavbar />
        <ScrollToTop />
        <Routes>
          <Route index element={<Intro />} />

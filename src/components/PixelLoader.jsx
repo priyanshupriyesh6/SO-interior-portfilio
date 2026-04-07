@@ -21,7 +21,7 @@ export const PixelLoader = () => {
             key={i}
             className="pixel"
             style={{
-              animationDelay: `${Math.random() * 2}s`,
+              animationDelay: `${(i % 10) * 0.15}s`,
             }}
           ></div>
         ))}
