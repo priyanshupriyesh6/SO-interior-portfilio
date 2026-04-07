@@ -64,8 +64,8 @@ export const Footer = () => {
             <div>
               <p className="section-label">Contact</p>
               <div className="space-y-3 leading-7 text-[var(--color-muted)]">
-                <a href="tel:+919811960048" className="block transition-colors duration-200 hover:text-[#fff7de]">
-                  +91 9811960048
+                <a href="tel:+91 9811960048 | +91 9811960650 | +91 9599317145" className="block transition-colors duration-200 hover:text-[#fff7de]">
+                  +91 9811960048 | +91 9811960650 | +91 9599317145
                 </a>
                 <a href="mailto:sointeriorsofficials@gmail.com" className="block transition-colors duration-200 hover:text-[#fff7de]">
                   sointeriorsofficials@gmail.com
