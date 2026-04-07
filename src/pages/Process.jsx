@@ -19,7 +19,7 @@ const steps = [
   {
     step: '04',
     title: 'Deliver with control',
-    description: 'Execution follows a cleaner review path so the completed space matches the approved design intent.',
+    description: 'Execution follows a focused review process so the completed space matches the approved design intent.',
   },
 ];
 
@@ -30,10 +30,9 @@ export const Process = () => {
         <div className="section-inner">
           <div className="max-w-3xl">
             <p className="section-label">Our Process</p>
-            <h1 className="section-title">A clean sequence of steps, without decorative motion.</h1>
+            <h1 className="section-title">A clear step-by-step process from brief to execution.</h1>
             <p className="section-subtitle">
-              The process section now reads as a structured workflow. Number animation, hover lift, and visual clutter
-              have been removed so the emphasis stays on what happens at each stage.
+              Every stage is planned to keep communication clear, decisions aligned, and execution on track.
             </p>
           </div>
         </div>
@@ -66,8 +65,7 @@ export const Process = () => {
           <div className="mt-8 surface-card-soft p-6">
             <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">Execution Principle</p>
             <p className="mt-3 max-w-4xl leading-7 text-[var(--color-muted)]">
-              Every step is designed to reduce revision noise, improve decision quality, and keep the finished space
-              aligned with the approved concept. The UI reflects that same principle by staying minimal and structured.
+              We stay involved through each stage to keep the project aligned from concept development to final delivery.
             </p>
           </div>
         </div>

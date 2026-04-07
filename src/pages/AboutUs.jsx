@@ -12,7 +12,7 @@ const principles = [
   },
   {
     title: 'Premium through restraint',
-    description: 'A controlled palette, cleaner detailing, and measured contrast create a more lasting premium feel.',
+    description: 'A controlled palette, refined detailing, and measured contrast create a lasting premium feel.',
   },
   {
     title: 'Execution-aware design',

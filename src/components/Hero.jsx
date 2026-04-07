@@ -21,7 +21,7 @@ export const Hero = () => {
             <div className="space-y-4">
               <p className="section-label">Luxury Interior Design Studio</p>
               <h1 className="section-title max-w-3xl">
-                SO Interiors creates disciplined, high-impact spaces across residential, commercial, and hospitality projects.
+                SO Interiors creates disciplined, high-impact spaces across residential, commercial, dining, and lifestyle projects.
               </h1>
               <p className="section-subtitle max-w-2xl">
                 We translate brief, brand, and function into interiors that feel refined, usable, and built to last.
@@ -30,7 +30,7 @@ export const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              {['Residential', 'Commercial', 'Hospitality'].map((service) => (
+              {['Residential', 'Commercial', 'Dining & Bar'].map((service) => (
                 <span key={service} className="static-pill">
                   {service}
                 </span>

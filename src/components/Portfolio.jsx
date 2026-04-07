@@ -121,10 +121,9 @@ export const Portfolio = () => {
       <div className="section-inner">
         <div className="mb-10 max-w-3xl">
           <p className="section-label">Portfolio</p>
-          <h2 className="section-title">Image framing is consistent, spacing is cleaner, and the work stays central.</h2>
+          <h2 className="section-title">Our Portfolio</h2>
           <p className="section-subtitle">
-            Categories remain available, but motion-heavy overlays and scaling have been replaced with quieter cards and
-            more predictable image proportions.
+            A selection of residential, commercial, dining, and lifestyle interiors designed by SO Interiors.
           </p>
         </div>
 
@@ -166,13 +165,6 @@ export const Portfolio = () => {
           ))}
         </div>
 
-        <div className="mt-8 surface-card-soft p-6">
-          <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">Portfolio Note</p>
-          <p className="mt-3 max-w-4xl leading-7 text-[var(--color-muted)]">
-            Each project is presented with the same spacing, border weight, and image ratio so the portfolio feels more
-            premium and easier to browse without relying on extra animation.
-          </p>
-        </div>
       </div>
     </section>
   );

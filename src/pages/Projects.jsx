@@ -11,8 +11,8 @@ const highlights = [
     description: 'Business interiors designed for movement, clarity, brand expression, and durability in use.',
   },
   {
-    title: 'Hospitality',
-    description: 'Guest environments with stronger atmosphere, controlled contrast, and cleaner experiential flow.',
+    title: 'Dining & Bar',
+    description: 'Guest environments shaped for atmosphere, comfort, and memorable experiences.',
   },
 ];
 
@@ -23,10 +23,9 @@ export const Projects = () => {
         <div className="section-inner">
           <div className="max-w-3xl">
             <p className="section-label">Projects</p>
-            <h1 className="section-title">A portfolio presented with cleaner framing and consistent image rhythm.</h1>
+            <h1 className="section-title">Selected work across residential, commercial, and dining spaces.</h1>
             <p className="section-subtitle">
-              The project experience now uses darker surfaces, lighter motion, cleaner borders, and fixed image framing so
-              the work itself reads more clearly across mobile and desktop layouts.
+              Explore a range of completed interiors that reflect our approach to planning, detail, and execution.
             </p>
           </div>
 

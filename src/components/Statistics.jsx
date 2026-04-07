@@ -8,7 +8,7 @@ export const Statistics = () => {
     {
       number: '500+',
       label: 'Projects Delivered',
-      note: 'Residential, commercial, and hospitality work across India.',
+      note: 'Residential, commercial, and dining-led work across India.',
     },
     {
       number: 'Since 2016',
@@ -27,10 +27,9 @@ export const Statistics = () => {
       <div className="section-inner">
         <div className="mb-10 max-w-3xl">
           <p className="section-label">Our Achievements</p>
-          <h2 className="section-title">Measured in delivered spaces, repeat trust, and consistent execution.</h2>
+          <h2 className="section-title">Years of work, delivered projects, and lasting client trust.</h2>
           <p className="section-subtitle">
-            The visual polish is quieter now, but the substance stays visible. These figures are static by design,
-            removing count-up effects and keeping the information readable.
+            Our journey is defined by completed interiors, long-term relationships, and steady execution across projects.
           </p>
         </div>
 
@@ -46,16 +45,16 @@ export const Statistics = () => {
 
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <div className="surface-card-soft p-5">
-            <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">Workflow</p>
-            <p className="mt-3 leading-7 text-[var(--color-muted)]">Structured documentation and cleaner review cycles.</p>
+            <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">Planning</p>
+            <p className="mt-3 leading-7 text-[var(--color-muted)]">Strong layouts and thoughtful design direction from the start.</p>
           </div>
           <div className="surface-card-soft p-5">
             <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">Materials</p>
             <p className="mt-3 leading-7 text-[var(--color-muted)]">Selections shaped by longevity, finish balance, and maintenance.</p>
           </div>
           <div className="surface-card-soft p-5">
-            <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">Communication</p>
-            <p className="mt-3 leading-7 text-[var(--color-muted)]">Clear expectations from concept sign-off to final execution.</p>
+            <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">Execution</p>
+            <p className="mt-3 leading-7 text-[var(--color-muted)]">Consistent follow-through from concept approval to final delivery.</p>
           </div>
         </div>
       </div>

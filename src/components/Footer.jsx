@@ -14,7 +14,7 @@ export const Footer = () => {
   const expertise = [
     'Residential interiors',
     'Commercial spaces',
-    'Hospitality formats',
+    'Dining formats',
     'Execution support',
   ];
 

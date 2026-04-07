@@ -26,7 +26,7 @@ export const Services = () => {
     {
       label: '03',
       title: 'Cafes, Restaurants, and Bars',
-      description: 'Hospitality interiors with atmosphere, seating logic, and finish selection tuned to guest experience.',
+      description: 'Dining interiors with atmosphere, seating logic, and finish selection tuned to guest experience.',
       detail: 'Each layout balances comfort, service efficiency, and visual identity without cluttering the guest journey.',
       points: ['Seating mix and zoning', 'Feature surfaces and bars', 'Mood lighting strategy'],
       image: expertiseTwo,
@@ -48,10 +48,10 @@ export const Services = () => {
           <div className="space-y-6">
             <div>
               <p className="section-label">Our Expertise</p>
-              <h2 className="section-title">A cleaner way to understand what we design.</h2>
+              <h2 className="section-title">Design expertise across multiple space formats.</h2>
               <p className="section-subtitle max-w-none">
-                We have replaced heavy card animations with a simpler content structure. The expertise summary now
-                reads faster, scales better on mobile, and keeps the focus on scope rather than decoration.
+                We work across residential, commercial, dining, and lifestyle spaces with a focus on planning,
+                functionality, and visual character.
               </p>
             </div>
             <div className="surface-card-soft p-6">

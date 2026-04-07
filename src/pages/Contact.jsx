@@ -104,10 +104,9 @@ export const Contact = () => {
         <div className="section-inner">
           <div className="max-w-3xl">
             <p className="section-label">Contact</p>
-            <h1 className="section-title">A quieter contact experience, with the same direct access to the studio.</h1>
+            <h1 className="section-title">Get in touch with SO Interiors.</h1>
             <p className="section-subtitle">
-              The page has been simplified into clearer information blocks and a cleaner enquiry form. Contact details
-              are aligned, headings stay gold, and unnecessary motion has been removed.
+              Share your project details, location, and requirements and our team will get back to you.
             </p>
           </div>
 
@@ -150,7 +149,7 @@ export const Contact = () => {
             <div className="surface-card p-6 sm:p-8">
               <div>
                 <p className="section-label">Send a Message</p>
-                <h2 className="text-3xl font-semibold text-[var(--color-gold)]">Start with a clear brief.</h2>
+                <h2 className="text-3xl font-semibold text-[var(--color-gold)]">Send us a message.</h2>
               </div>
 
               {messageStatus && (

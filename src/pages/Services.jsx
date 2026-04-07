@@ -2,7 +2,7 @@ import { Accordion } from '../components/Accordion';
 import { Footer } from '../components/Footer';
 import heroImage from '../assets/sectioncard slot images/18comune/2.jpeg';
 import residentialImage from '../assets/sectioncard slot images/18comune/3.jpeg';
-import hospitalityImage from '../assets/sectioncard slot images/Adda by soi7/1.jpeg';
+import diningImage from '../assets/sectioncard slot images/Adda by soi7/1.jpeg';
 import commercialImage from '../assets/sectioncard slot images/rassta/2.jpeg';
 import retailImage from '../assets/sectioncard slot images/soi7/2.jpeg';
 import planningImage from '../assets/sectioncard slot images/18comune/4.jpeg';
@@ -29,16 +29,16 @@ const expertiseItems = [
   },
   {
     label: '03',
-    title: 'Hospitality Environments',
+    title: 'Dining and Social Spaces',
     description: 'Cafes, restaurants, bars, and lounges shaped around guest movement and atmosphere.',
     detail: 'Layouts, feature surfaces, lighting, and seating mix are resolved together to keep the experience cohesive.',
     points: ['Dining and lounge zoning', 'Service movement paths', 'Ambient lighting direction'],
-    image: hospitalityImage,
+    image: diningImage,
   },
   {
     label: '04',
     title: 'Retail and Lifestyle Formats',
-    description: 'Showrooms, salons, and customer-facing environments with stronger display logic and cleaner rhythm.',
+    description: 'Showrooms, salons, and customer-facing environments with strong display logic and visual rhythm.',
     detail: 'We keep the visual system controlled so the product, service, or experience remains central.',
     points: ['Display sequencing', 'Customer navigation', 'Brand-aligned presentation'],
     image: retailImage,
@@ -105,16 +105,15 @@ export const Services = () => {
             <div className="space-y-6">
               <div>
                 <p className="section-label">Services</p>
-                <h1 className="section-title">Structured expertise, presented with less noise and more clarity.</h1>
+                <h1 className="section-title">Interior design services across residential, commercial, dining, and lifestyle spaces.</h1>
                 <p className="section-subtitle max-w-none">
-                  The services page now uses accordion sections instead of animated cards. It keeps the information easier
-                  to scan, especially on mobile, while preserving the full scope of the studio.
+                  From concept development and planning to visualization, material selection, and execution support.
                 </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="surface-card-soft p-5">
                   <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">Coverage</p>
-                  <p className="mt-3 leading-7 text-[var(--color-muted)]">Residential, commercial, hospitality, and lifestyle projects.</p>
+                  <p className="mt-3 leading-7 text-[var(--color-muted)]">Residential, commercial, dining, and lifestyle projects.</p>
                 </div>
                 <div className="surface-card-soft p-5">
                   <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">Method</p>
@@ -155,7 +154,7 @@ export const Services = () => {
               <p className="section-label">Service Scope</p>
               <h2 className="text-3xl font-semibold text-[var(--color-gold)]">What we provide</h2>
               <p className="mt-3 leading-7 text-[var(--color-muted)]">
-                The delivery stack remains end-to-end, but the presentation is now cleaner and easier to follow.
+                A complete range of design and execution services tailored to the needs of each project.
               </p>
             </div>
             <Accordion items={offeringItems} defaultOpen={0} />
