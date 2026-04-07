@@ -22,11 +22,11 @@ export const Founders = () => {
       <section className="page-section">
         <div className="section-inner grid gap-8 lg:grid-cols-[0.92fr,1.08fr] lg:items-center">
           <div className="surface-card p-4 sm:p-5">
-            <div className="image-frame rounded-[22px]">
+            <div className="image-frame mx-auto max-w-[420px] rounded-[22px]">
               <img
                 src={founderImage}
                 alt="Founders - Sanju Jangid and Omprakash Jangid"
-                className="h-[340px] w-full sm:h-[470px]"
+                className="h-[280px] w-full sm:h-[360px]"
                 loading="lazy"
               />
             </div>

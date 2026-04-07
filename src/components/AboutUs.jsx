@@ -29,11 +29,11 @@ export const AboutUs = () => {
           </div>
 
           <div className="surface-card p-4 sm:p-5">
-            <div className="image-frame rounded-[22px]">
+            <div className="image-frame mx-auto max-w-[360px] rounded-[22px]">
               <img
                 src={founderPhoto}
                 alt="SO Interiors leadership"
-                className="h-[320px] w-full sm:h-[420px]"
+                className="h-[250px] w-full sm:h-[320px]"
                 loading="lazy"
               />
             </div>

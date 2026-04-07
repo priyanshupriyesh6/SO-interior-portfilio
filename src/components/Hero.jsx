@@ -10,9 +10,9 @@ export const Hero = () => {
         <img
           src={homeback}
           alt=""
-          className="h-full w-full object-cover opacity-20"
+          className="h-full w-full object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-black/78" />
+        <div className="absolute inset-0 bg-black/72" />
       </div>
 
       <div className="section-inner relative z-10">
@@ -49,12 +49,12 @@ export const Hero = () => {
           </div>
 
           <div className="surface-card relative overflow-hidden rounded-[28px] p-4 sm:p-5">
-            <div className="image-frame rounded-[22px] bg-[#0d0d0d] p-5">
+            <div className="image-frame rounded-[22px] bg-[#121212] p-5">
               <img
                 src={banner}
                 alt="SO Interiors brand banner"
-                className="mx-auto h-[320px] w-full object-contain sm:h-[420px] lg:h-[500px]"
-                style={{ objectFit: 'contain' }}
+                className="mx-auto h-[260px] w-full object-contain sm:h-[340px] lg:h-[420px]"
+                style={{ objectFit: 'contain', filter: 'brightness(1.18) contrast(1.08)' }}
               />
             </div>
             <div className="mt-5 grid gap-4 text-sm text-[var(--color-muted)] sm:grid-cols-3">
