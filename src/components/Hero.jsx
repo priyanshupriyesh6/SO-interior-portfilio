@@ -19,7 +19,7 @@ export const Hero = () => {
         <div className="grid items-center gap-10 lg:grid-cols-[1.08fr,0.92fr]">
           <div className="space-y-8">
             <div className="space-y-4">
-              <p className="section-label">Luxury Interior Design Studio</p>
+              <p className="section-label text-xl font-bold">Where Space Becomes Signature</p>
               <h1 className="section-title max-w-3xl">
                 SO Interiors creates disciplined, high-impact spaces across residential, commercial, dining, and lifestyle projects.
               </h1>

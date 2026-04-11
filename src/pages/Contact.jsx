@@ -130,7 +130,7 @@ export const Contact = () => {
                       </div>
                       <div>
                         <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">{detail.label}</p>
-                        <div className="mt-3 leading-7 text-[var(--color-muted)]">{content}</div>
+                        <div className={`mt-3 leading-7 text-[var(--color-muted)]${detail.label === 'Phone' ? ' text-base font-medium normal-case tracking-normal' : ''}`}>{content}</div>
                       </div>
                     </div>
                   </article>

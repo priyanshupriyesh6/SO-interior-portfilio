@@ -35,8 +35,7 @@ export const Footer = () => {
               </div>
             </div>
             <p className="max-w-md leading-7 text-[var(--color-muted)]">
-              Premium interior design practice focused on clean planning, controlled detailing, and spaces that feel
-              intentional in daily use.
+              Where Space Becomes Signature.
             </p>
             <div className="flex flex-wrap gap-3">
               {expertise.map((item) => (
@@ -77,7 +76,7 @@ export const Footer = () => {
             <div className="surface-card-soft p-5">
               <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-gold)]">Brand Line</p>
               <p className="mt-3 leading-7 text-[var(--color-muted)]">
-                Where space becomes signature through disciplined design and carefully resolved detail.
+                Where Space Becomes Signature.
               </p>
             </div>
           </div>

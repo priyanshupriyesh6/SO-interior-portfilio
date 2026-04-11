@@ -1,4 +1,4 @@
-import founderPhoto from '../assets/foundersphoto.jpeg';
+import founderPhoto from '../assets/founderpho.jpeg';
 
 export const AboutUs = () => {
   return (
