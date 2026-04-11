@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/LOGO.jpg';
-import introVid from '../assets/intropagevid.MOV';
+import introVid from '../assets/intropagevid2.mp4';
 import { LoadingAnimation } from '../components/LoadingAnimation';
 
 export const Intro = () => {
@@ -27,7 +27,7 @@ export const Intro = () => {
                 playsInline
                 className="intro-video-background"
             >
-                <source src={introVid} type="video/quicktime" />
+                <source src={introVid} type="video/mp4" />
             </video>
             {isLoading && <LoadingAnimation />}
             <button 
